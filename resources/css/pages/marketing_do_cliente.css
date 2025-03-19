@@ -1,0 +1,18 @@
+main {
+  min-height: calc(100vh - 129px);
+  background-color: var(--cor-fundo);
+}
+
+@media (max-width:980px) {
+  .btn-orange > img, .btn-green > img {
+    display: none !important;
+  }
+}
+
+@media (max-width:780px) {
+  #create_marketing_cliente {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}

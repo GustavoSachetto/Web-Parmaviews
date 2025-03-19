@@ -1,0 +1,30 @@
+.bg-lapis-lazuli {
+  background-color: var(--cor-cabecalhos);
+}
+
+.btn-orange, .btn-green {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.btn-orange {
+  background-color: #eca73d;
+}
+
+.btn-orange:hover {
+  background-color: #c58c35;
+}
+
+.btn-green {
+  background-color: #5cbb5c;
+}
+
+.btn-green:hover {
+  background-color: #428542;
+}

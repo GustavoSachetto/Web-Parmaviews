@@ -1,0 +1,9 @@
+header > img.menu {
+  width: 15px;
+  height: 12px;
+  margin-right: 25px;
+}
+
+header > img.logo {
+  width: 200px;
+}

@@ -1,0 +1,30 @@
+<form id="create_marketing_cliente" action="{{URL}}/marketing_do_cliente" method="post" class="d-flex justify-content-between gap-4">
+  <div class="w-100">
+    {{select_tipo_acao}}
+  </div>
+
+  <div class="w-100">
+    <label for="data_prevista" class="form-label text-secondary-emphasis">Data prevista</label>
+    <input type="date" class="form-control" id="data_prevista"  name="data_prevista" required>
+  </div>
+
+  <div class="w-100">
+    <label for="investimento_previsto" class="form-label text-secondary-emphasis">Investimento previsto</label>
+    <div class="input-group">
+      <span class="input-group-text">R$</span>
+      <input type="number" step="0.01" id="investimento_previsto" name="investimento_previsto" class="form-control" placeholder="0,00" required>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-end gap-2 w-100">
+    <button type="reset" class="btn-orange">
+      <img width="18" class="me-1" src="{{URL}}/resources/img/icones/borracha.png" alt="Borracha">
+      <span>Limpar</span>
+    </button>
+
+    <button type="submit" class="btn-green">
+      <img width="16" class="me-1" src="{{URL}}/resources/img/icones/adicao.png" alt="Adicao">
+      <span>Adicionar</span>
+    </button>
+  </div>
+</form>

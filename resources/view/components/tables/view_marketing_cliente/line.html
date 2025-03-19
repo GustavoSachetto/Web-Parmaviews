@@ -1,0 +1,65 @@
+<tr>
+  <td class="text-secondary-emphasis">
+    {{nome_acao}}
+  </td>
+  <td class="text-secondary-emphasis">
+    {{data_prevista}}
+  </td>
+  <td class="text-start text-secondary-emphasis">
+    R$ {{investimento}}
+  </td>
+  
+  <td class="text-center text-secondary-emphasis">
+    <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#modalAtualizar_{{id}}">
+      <img width="16" src="{{URL}}/resources/img/icones/lapis.png" alt="Lapis Editar">
+    </button>
+
+    <div class="modal fade" id="modalAtualizar_{{id}}" tabindex="-1" aria-labelledby="modalAtualizarLabel_{{id}}" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAtualizarLabel_{{id}}">Atualizar a ação: {{nome_acao}}, {{data_prevista}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="atualizar_{{id}}" action="{{URL}}/marketing_do_cliente/atualizar/{{id}}" method="post" class="d-flex flex-column gap-2">
+              
+              <div class="w-100 d-flex flex-column align-items-start">
+                {{select_tipo_acao}}
+              </div>
+            
+              <div class="w-100 d-flex flex-column align-items-start">
+                <label for="data_prevista" class="form-label text-secondary-emphasis">Data prevista</label>
+                <input type="date" class="form-control" id="data_prevista_{{id}}"  name="data_prevista" required>
+              </div>
+            
+              <div class="w-100 d-flex flex-column align-items-start">
+                <label for="investimento_previsto" class="form-label text-secondary-emphasis">Investimento previsto</label>
+                <div class="input-group">
+                  <span class="input-group-text">R$</span>
+                  <input type="number" step="0.01" id="investimento_previsto_{{id}}" name="investimento_previsto" placeholder="{{investimento}}" class="form-control" required>
+                </div>
+                <script>document.getElementById('investimento_previsto_{{id}}').value = parseFloat('{{investimento}}'.replace(',', '.'));</script>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+            <button type="submit" class="btn btn-primary" form="atualizar_{{id}}">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+
+  <td class="text-center">
+    <form action="{{URL}}/marketing_do_cliente/deletar" method="post">
+
+      <button type="submit" class="btn p-0" name="id_acao" value="{{id}}">
+        <img width="20" src="{{URL}}/resources/img/icones/fechar.png" alt="Fechar">
+      </button>
+      
+    </form>
+  </td>
+</tr>

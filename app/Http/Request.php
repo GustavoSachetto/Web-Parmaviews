@@ -17,11 +17,6 @@ class Request
      */
     private string $httpMethod;
 
-    /** 
-     * Usuário logado no site
-    */
-    private User $user;
-
     /**
      * URL da página
      */
@@ -72,22 +67,6 @@ class Request
         
         $inputRaw = file_get_contents('php://input'); // POST JSON
         $this->postVars = (strlen($inputRaw) && empty($_POST)) ? json_decode($inputRaw, true) : $this->postVars;
-    }
-
-    /**
-     * Método reponsável por definir o usuário
-     */
-    public function setUser(User $user): void
-    {
-        $this->user = $user;
-    }
-
-    /**
-     * Método reponsável por pegar o usuário
-     */
-    public function getUser(): User
-    {
-        return $this->user;
     }
 
     /**

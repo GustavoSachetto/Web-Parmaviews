@@ -1,0 +1,41 @@
+<main>
+  <article>
+    <section>
+      <h1 class="pt-2 pb-1 px-4 text-body-tertiary fs-5 fw-normal">Gestão de Verbas</h1>
+    </section>
+    <section class="bg-white p-4">
+      <section>
+        {{create_marketing_cliente}}
+
+        <button type="button" class="btn p-0 text-info-emphasis opacity-50" data-bs-toggle="modal" data-bs-target="#modalAdicionarAcao">
+          adicionar nova ação
+        </button>
+        <div class="modal fade" id="modalAdicionarAcao" tabindex="-1" aria-labelledby="modalAdicionarAcaoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalAdicionarAcaoLabel">Adicionar nova ação</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="{{URL}}/marketing_do_cliente/nova_acao" method="post" id="novaAcao">
+                  <label for="acao" class="form-label">Ação</label>
+                  <input type="text" class="form-control" placeholder="Digite o nome" maxlength="100" name="nome_acao" id="nome_acao" required>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+                <button type="submit" class="btn btn-primary" form="novaAcao">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {{alert}}
+      </section>
+      <section class="pt-0">
+        {{view_marketing_cliente}}
+      </section>
+    </section>
+  </article>
+</main>

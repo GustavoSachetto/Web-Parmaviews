@@ -3,7 +3,6 @@
 namespace App\Utils;
 
 use Exception;
-use App\Model\Entity\User as EntityUser;
 
 class Examiner
 {
@@ -21,16 +20,6 @@ class Examiner
     public static function checkArrayItens(array $itens): void
     {
         if (empty($itens)) throw new Exception('O array de itens está vazio.', 404);
-    }
-
-    /**
-     * Método responsável por verificar a senha do usuário
-     */
-    public static function checkUserPassword(string $password_hash, EntityUser $obUser): void
-    {
-        if (!password_verify($password_hash, $obUser->password_hash)) {
-            throw new Exception("O usuário ou senha são inválidos.", 400);
-        }
     }
 
     /** 
