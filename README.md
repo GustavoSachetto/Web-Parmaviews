@@ -38,7 +38,7 @@ php cli --db load
 
 Acessar pelo link
 ```
-http://localhost/parmaviews
+http://localhost/web-parmaviews
 ```
 
 ## Desenvolvendo
