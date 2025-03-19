@@ -7,7 +7,7 @@ Teste técnico prático elaborado para a vaga de estágio de Desenvolvedor Web n
 * __Link para acesso:__ https://gustavosachetto.site/web-parmaviews
 * __Video demonstrativo:__ https://www.youtube.com/watch?v=t67VcfRbkqE
 
-<span class="text-danger">
+<span style="color: red;">
   Atenção, certifique-se de que o Xampp está instalado e o PHP está na versão 8.2 em sua máquina! Além disso todos os comandos de inicialização devem ser executados no terminal do servidor Xampp.
 </span>
 
